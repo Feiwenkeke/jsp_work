@@ -54,7 +54,7 @@
                     List<String> pathName =showdircontent.getPathName();
                     for (String list : pathName) {
 
-                        if (list.contains("jsp")){
+                        if (list.contains(".jsp")){
 
 //                System.out.println(list);
                             if (!(list.contains("NoShow"))){
