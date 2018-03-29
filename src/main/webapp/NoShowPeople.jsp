@@ -25,7 +25,6 @@
 <%!
     int count;
     StringBuffer personList;
-
     public void judge() {
         if (count == 0) {
             personList = new StringBuffer();
@@ -43,11 +42,11 @@
 %>
 
 <%
-    String name = request.getParameter("name");
+    String name= request.getParameter("name");
 // Because of using UTF-8,need not to transform;
 //    byte bb[] = name.getBytes("UTF-8");
-//    name = new String(bb);
-    if ((name.length() == 0) || (name.length() > 10)) {
+//    name = new String(bb)
+    if ((name==null)||(name.equals(""))||(name.length() == 0) || (name.length() > 10)) {
 %>
 
     <jsp:forward page="inputName.jsp"></jsp:forward>
